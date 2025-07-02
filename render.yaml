@@ -17,9 +17,3 @@ services:
         value: "3.11.0"
       - key: LOG_LEVEL
         value: "INFO"
-    scaling:
-      minInstances: 1
-      maxInstances: 1
-    healthCheckPath: /health
-    autoDeploy: true
-
