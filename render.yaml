@@ -3,7 +3,7 @@ services:
     name: telegram-bfl-image-bot
     runtime: python3
     env: python
-    repo: https://github.com/yourusername/telegram-bfl-image-bot.git
+    repo: https://github.com/greatautomate/tgg.git
     branch: main
     buildCommand: pip install --upgrade pip && pip install -r requirements.txt
     startCommand: python src/bot.py
