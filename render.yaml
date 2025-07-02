@@ -1,7 +1,7 @@
 services:
   - type: worker
     name: telegram-bfl-image-bot
-    
+    runtime: P
     env: python
     repo: https://github.com/greatautomate/tgg.git
     branch: main
@@ -14,6 +14,6 @@ services:
       - key: BFL_API_KEY
         sync: false
       - key: PYTHON_VERSION
-        value: "3.11.0"
+        value: "3.11.9"
       - key: LOG_LEVEL
         value: "INFO"
