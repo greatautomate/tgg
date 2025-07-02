@@ -1,7 +1,7 @@
 services:
   - type: worker
     name: telegram-bfl-image-bot
-    runtime: python3.11
+    
     env: python
     repo: https://github.com/greatautomate/tgg.git
     branch: main
