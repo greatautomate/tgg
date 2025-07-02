@@ -1,0 +1,25 @@
+services:
+  - type: background-worker
+    name: telegram-bfl-image-bot
+    runtime: python3
+    env: python
+    repo: https://github.com/yourusername/telegram-bfl-image-bot.git
+    branch: main
+    buildCommand: pip install --upgrade pip && pip install -r requirements.txt
+    startCommand: python src/bot.py
+    plan: starter
+    envVars:
+      - key: TELEGRAM_BOT_TOKEN
+        sync: false
+      - key: BFL_API_KEY
+        sync: false
+      - key: PYTHON_VERSION
+        value: "3.11.0"
+      - key: LOG_LEVEL
+        value: "INFO"
+    scaling:
+      minInstances: 1
+      maxInstances: 1
+    healthCheckPath: /health
+    autoDeploy: true
+
