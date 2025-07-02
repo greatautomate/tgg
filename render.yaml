@@ -1,5 +1,5 @@
 services:
-  - type: background-worker
+  - type: worker
     name: telegram-bfl-image-bot
     runtime: python3
     env: python
